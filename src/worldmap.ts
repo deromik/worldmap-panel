@@ -190,7 +190,7 @@ export default class WorldMap {
 
   createPopup(circle, locationName, value) {
     const unit = value && value === 1 ? this.ctrl.panel.unitSingular : this.ctrl.panel.unitPlural;
-    const label = (locationName + ': ' + value + ' ' + (unit || '')).trim();
+    const label = (locationName + ' ' + (unit || '')).trim();
     circle.bindPopup(label, {
       offset: (<any>window).L.point(0, -2),
       className: 'worldmap-popup',
